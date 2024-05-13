@@ -23,7 +23,7 @@ operations = {
 }
 
 def calculator():
-  print(logo)
+#   print(logo)
 
   num1 = float(input("+"))
   for symbol in operations:
@@ -41,7 +41,7 @@ def calculator():
       num1 = answer
     else:
       should_continue = False
-      clear()
+    #   clear()
       calculator()
 
 calculator()

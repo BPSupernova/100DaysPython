@@ -49,3 +49,4 @@ travel_log_super_deluxe = [
         "total_visits": 3
     },
 ]
+print(travel_log_super_deluxe[0]['country'])

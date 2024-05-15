@@ -1,5 +1,22 @@
 import random
 
+logo = '''
+********************************************************************
+*  ________                              ___________.__            *
+* /  _____/ __ __   ____   ______ ______ \__    ___/|  |__   ____  *
+*/   \  ___|  |  \_/ __ \ /  ___//  ___/   |    |   |  |  \_/ __ \ *
+*\    \_\  \  |  /\  ___/ \___ \ \___ \    |    |   |   Y  \  ___/ *
+* \______  /____/  \___  >____  >____  >   |____|   |___|  /\___  >*
+*        \/            \/     \/     \/                  \/     \/ *
+* _______               ___.                ._.                    *
+* \      \  __ __  _____\_ |__   ___________| |                    *
+* /   |   \|  |  \/     \| __ \_/ __ \_  __ \ |                    *
+*/    |    \  |  /  Y Y  \ \_\ \  ___/|  | \/\|                    *
+*\____|__  /____/|__|_|  /___  /\___  >__|   __                    *
+*        \/            \/    \/     \/       \/                    *
+********************************************************************
+'''
+
 def interpret_guess(guess, number): 
     """Evaluates whether the guess is higher, lower, or equal to the number"""
     if guess == number:
@@ -14,6 +31,7 @@ def interpret_guess(guess, number):
         print("You guessed too low, please guess again")
         return False
 
+print(logo)
 print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100.")
 

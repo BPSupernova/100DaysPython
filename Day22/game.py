@@ -47,7 +47,7 @@ player1_score.update_score()
 player2_score.update_score()
 
 while game_active:
-    time.sleep(0.1)
+    time.sleep(ball.move_speed)
     screen.update()
     ball.move()
 
@@ -56,16 +56,19 @@ while game_active:
 
     if (player1.distance(ball) < 50 and ball.xcor() < -270) or (player2.distance(ball) < 50 and ball.xcor() > 270):
         ball.collide()
+        ball.move_speed *= 0.9
 
     if ball.xcor() > 400:
         player1_score.increase_score()
         ball.goto(0, 0)
         ball.collide() # To switch x-cor
+        ball.move_speed = 0.1
 
     if ball.xcor() < -400:
         player2_score.increase_score()
         ball.goto(0, 0)
         ball.collide() # To switch x-cor
+        ball.move_speed = 0.1
 
     if player1_score.score == 11:
         game_active = False

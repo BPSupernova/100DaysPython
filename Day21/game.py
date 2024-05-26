@@ -34,14 +34,14 @@ while game_active:
         scoreboard.increase_score()
 
     if player.segments[0].xcor() > 300 or player.segments[0].xcor() < -300 or player.segments[0].ycor() > 300 or player.segments[0].ycor() < -300:
-        game_active = False
-        scoreboard.game_over()
+        scoreboard.reset()
+        player.reset()
 
     for segment in player.segments:
         if segment == player.segments[0]:
             continue
         if player.segments[0].distance(segment) < 10:
-            game_active = False
-            scoreboard.game_over()
-
+            scoreboard.reset()
+            player.reset()
+            
 screen.exitonclick()

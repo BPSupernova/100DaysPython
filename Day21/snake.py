@@ -22,6 +22,24 @@ class Snake:
         new_segment.goto(position)
         self.segments.append(new_segment)
 
+    def reset(self):
+        for segment in self.segments:
+            segment.goto(1000, 1000)
+        self.segments.clear()
+        segment1 = Turtle('square')
+        segment2 = Turtle('square')
+        segment3 = Turtle('square')
+
+        segment1.setposition(20, 0)
+        segment2.setposition(0, 0)
+        segment3.setposition(-20, 0)
+
+        self.segments = [segment1, segment2, segment3]
+        for segment in self.segments:
+            segment.color('white')
+            segment.penup()
+        
+
     def extend(self):
         self.add_segment(self.segments[-1].position())
 
